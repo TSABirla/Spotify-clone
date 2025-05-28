@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify -Web Music</title>
+   
+
+   <style>
+    body {
+    
+        height: 100vh;
+        background-color: black;
+        color: #ffff;
+        font-size: var(--encore-text-size-larger);
+      text-wrap: balance;
+    /* Font-family stack similar to Spotify */
+    
+        font-family: 'Circular', 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    flex-wrap: wrap;
+    
+      
+    }
+    
+    
+    header {
+        opacity: 1;
+        display: flex;
+        margin: 1%;
+        height: calc(48px + var(--panel-gap)*2);
+        /* padding: 1%; */
+        /* height: 48px; */
+       justify-content: space-between;
+    
+    }
+    
+    header .logo {
+     justify-content: center;
+      
+    }
+    header .input{
+        justify-content: center;
+        align-content: center;
+    }
+    header .input input{
+        border-radius: 12px;
+        background-color: #1f1f1f;
+        height: 48px;
+       
+    }
+    header .input  ::placeholder{
+        color: rgb(92, 92, 92);
+    }
+    
+    
+    header .register {
+        display: flex;
+        overflow: hidden;
+        gap: 12px;
+    
+    }
+    
+    
+    header .register a{
+        width: 108.283px;
+        /* border-radius: 22px; */
+        border-radius: var(--encore-button-corner-radius,9999px);
+       align-items: center;
+       justify-content: center;
+       display: flex;
+        
+        /* background-color: #ffff; */
+    }
+    header .register a:hover{
+        scale: 1.03;
+    }
+    header .signup {
+    background-color: black;
+    color: #ffff;
+    
+    }
+    header .login{
+        background-color: #ffff;
+        color: black;
+    }
+    
+    
+    main{
+        margin: 0;
+       display: flex;
+        height: calc(100vh - 48px);
+    }
+    
+    
+    main h1{
+        font-weight: 700;
+    }
+    main #container{
+        flex: 1;
+        overflow-y: auto;
+    }
+    main .container{
+       
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .resizer {
+        width: 5px;
+        background: #444;
+        cursor: ew-resize;
+        position: relative;
+    }
+    
+    .resizer:hover {
+        background: #888;
+       
+    }
+    main .left-pane{
+        width: 30%;
+        min-width: 10%;
+        max-width: 90%; 
+    
+    
+    
+        padding: 20px;
+        background-color:#121212;
+        margin-right: 0.8%;
+        border-radius: 8px;
+        overflow: hidden;
+    
+    }
+    main .right-pane{
+        background-color: #202020;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-y: auto; 
+    }
+    main  img{
+        height: 29vh;
+        width: 29vh;
+        
+        
+        
+        }
+        
+    main .bar {
+        display: flex;
+    
+    
+    }
+    main .img{
+        width: 178.55px;
+        height: 232.55px;
+       background-color: #202020;    
+    }
+    main .img:hover{
+        /* color: black; */
+        background-color: #121212;
+    }
+    
+    main .bar1 {
+        display: flex;
+        
+         
+    }
+    
+    
+    
+    main .bar2 {
+        display: flex;
+    }
+    
+    main .bar3 {
+        display: flex;
+    }
+    
+    main .bar4 {
+        display: flex;
+    }
+    
+    main .bar5 {
+        display: flex;
+    }
+    
+     main .side {display: flex;
+        flex-direction: row;
+      
+    }
+   </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img style="width: 32px; height : 32px;" src="logo.png" alt="logo">
+        </div>
+        <div>
+
+        </div>
+        <div class="input">
+
+            <input  type="text" placeholder="What Do You want to play?">
+        </div>
+        <div class="register">
+
+
+            <a class="signup">
+                Sign Up
+            </a>
+            <a class="login">
+                Log in
+            </a>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+        <div class="side">
+            <div class="left-pane">
+                <div >
+                    <section>
+                        <button>Your library</button>
+                    </section>
+                    <section>
+                        <span>Let's find Some podcasts to follow</span>
+                        <br>
+                        <span>We'll keep you updated on new episodes</span>
+                        <span>
+                            <br>
+                            <button>
+                                Browse podcasts
+                            </button>
+                        </span>
+                    </section>
+                    <section>
+                        <ul style="list-style-type: none; ">
+                            <li>
+                                Legal
+                            </li>
+                            <li>Safety & privacy center</li>
+                            <li>privacy policy</li>
+                            <li>Cookies</li>
+                            <li>About ads</li>
+                            <li>Accessibility</li>
+
+                        </ul>
+                        <span><a style=" text-decoration: none; color:black" href="#">Cookies</a></span>
+                        <br>
+                        <button>English</button>
+                    </section>
+                </div>
+            </div>
+            <div class="resizer"></div>
+            <div class="right-pane">
+            
+                <div>
+                    <h1>Popular artist</h1>
+                    <div class="bar">
+                        <div class="img">
+                            <div>
+                            <img style="border-radius: 50%;" src="/assest/artist/pritam.jpeg" alt="Pritam"><br>
+                            <span>Pritam</span><br>
+                            <span>Artist</span><br>
+                        </div>
+                        </div>
+                        <div class="img">
+                            <img style="border-radius: 50%;" src="/assest/artist/arijit.jpeg" alt="Arijit"><br>
+                            <span>Arijit</span><br>
+                            <span>Artist</span><br>
+                        </div>
+                        <div class="img">
+                            <img style="border-radius: 50%;" src="/assest/artist/Sachin-jigar.jpeg"
+                                alt="Sachin-jigar"><br>
+                            <span>Sachin-jigar</span><br>
+                            <span>Artist</span><br>
+                        </div>
+                        <div class="img">
+                            <img style="border-radius: 50%;" src="/assest/artist/A.Rrehman.jpeg" alt="A.R rehman"><br>
+                            <span>A.R rehman</span><br>
+                            <span>Artist</span><br>
+                        </div>
+                        <div class="img">
+                            <img style="border-radius: 50%;" src="/assest/artist/Vishal-shekhar.jpg"
+                                alt="Vishal-shekhar"><br>
+                            <span>Vishal-shekhar</span><br>
+                            <span>Artist</span><br>
+                        </div>
+                        <div class="img">
+                            <img style="border-radius: 50%;" src="/assest/artist/Atifashlam.jpg" alt="Atif ashlam"><br>
+                            <span>Atif ashlam</span><br>
+                            <span>Artist</span><br>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Popular albums</h1>
+                    <div class="bar 1">
+                        <div class="img">
+                            <img src="/assest/Album/glory.jpeg" alt="GLORY"><br>
+                            <span>GLORY</span><br>
+                            <span>Yo Yo Honey Singh</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Album/aashiqui2.jpeg" alt="Aashiqui 2"><br>
+                            <span>Aashiqui 2</span><br>
+                            <span>Mithoon,Ankit <br> Tiwari,Jeet Gannguli</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Album/Patandar.jpeg" alt="patandar"><br>
+                            <span>patandar</span><br>
+                            <span>Arjan Dhillon,Mxrci</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Album/Jotum.jpeg" alt="Jo Tum"><br>
+                            <span>Jo Tum Mere Ho</span><br>
+                            <span>Anuv Jain</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Album/Makingmemorie.jpeg" alt="Making-Memories"><br>
+                            <span>Making-Memories</span><br>
+                            <span>Karan Aujla,Ikky</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Album/yehjawani.jpeg" alt="Ye jawaani"><br>
+                            <span>Ye Jawaani He Deewani</span><br>
+                            <span>Pritam</span><br>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Popular radio</h1>
+                    <div class="bar 2">
+                        <div>
+                            <img src="/assest/Radio/Arijitradio.jpeg" alt="Arijit Singh"><br>
+                            <span>With Atif Aslam,Sachin-Jigar... </span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Radio/Diljitdoshan.jpeg" alt="Diljit Dosanjh"><br>
+                            <span>With Karan Aujla,Shubh,Sidhu...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Radio/Shreya.jpeg" alt="Shreya Ghoshal"><br>
+                            <span>With A.R Rahman,<br>Vishal-Shekhar,...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Radio/G.Vprakash.jpeg" alt="G.V.Prakash"><br>
+                            <span>With Anirudh Ravichander,...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Radio/KISHOREKUMAR.jpeg" alt="Kishore Kumar"><br>
+                            <span>With mukesh,Tabassum,...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Radio/KK.jpeg" alt="KK"><br>
+                            <span>With Pritam,Mohit Chauhan,Armaan...</span><br>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Featured Charts</h1>
+                    <div class="bar 3">
+                        <div>
+                            <img src="/assest/Feature_chart/Toppopular.jpeg" alt="Topglobal"><br>
+                            <span>Your Weekly update Of Most The Played...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Feature_chart/Topsongsusa.jpeg" alt="TopUsa"><br>
+                            <span>Your Weekly update Of Most The Played...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Feature_chart/top50global.jpeg" alt="50Global"><br>
+                            <span>Your daily update Of Most The Played...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Feature_chart/Top50Usa.jpeg" alt="50Usa"><br>
+                            <span>Your daily update Of Most The Played...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Feature_chart/viral50global.jpeg" alt="viralGlobal"><br>
+                            <span>Your daily update Of Most Viral track...</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Feature_chart/viral50usa.jpeg" alt="ViralUsa"><br>
+                            <span>Your daily update Of Most Viral track...</span><br>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Playlists from our editors</h1>
+                    <div class="bar 4">
+                        <div>
+                            <img src="/assest/Playlists from our editors/Sunday Brunch.jpg" alt="Sunday Brunch"><br>
+                            <span>Classic Tunes</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Playlists from our editors/Lazy Sunday.jpg" alt="Lazy Sunday"><br>
+                            <span>Quiet Sunday</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Playlists from our editors/Raap Cavior.jpg" alt="Raap Cavior"><br>
+                            <span>Music from J.Cole</span><br>
+                        </div>
+                        <div>
+                            <img src="/assest/Playlists from our editors/Sunday mood.jpg" alt="Sunday Mood"><br>
+                            <span>A Lazy Sunday Vibe</span><br>
+                        </div>
+                        <div>
+                            <img width="225px" height="225px"
+                                src="/assest/Playlists from our editors/Sweet Soul Sunday.jpg"
+                                alt="Sweet Soul Sunday"><br>
+                            <span>Old And New</span><br>
+                        </div>
+                        <div>
+                            <img width="225px" height="225px"
+                                src="/assest/Playlists from our editors/Sunday session.jpg" alt="Sunday Sessions"><br>
+                            <span>HomeGrow</span><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar 5">
+                    <section>
+                        <h3>Company</h3>
+                        <span>About Us</span><br>
+                        <span>Jobs</span><br>
+                        <span>For the Record</span><br>
+                    </section>
+                    <section>
+                        <h3>Communities</h3>
+                        <span>For Artists</span><br>
+                        <span>Developers</span><br>
+                        <span>Advertising</span><br>
+                        <span>Investors</span><br>
+                        <span>Vendors</span><br>
+                    </section>
+                    <section>
+                        <h3>Useful Links</h3>
+                        <span>Support</span><br>
+                        <span>Free Mobile App</span><br>
+                    </section>
+                    <section>
+                        <h3>Spotify Plans</h3>
+                        <span>Premium Individual</span><br>
+                        <span>Premium Duo</span><br>
+                        <span>Premium Family</span><br>
+                        <span>Premium Student</span><br>
+                        <span>Spotify Free</span><br>
+                    </section>
+                    <section>
+                        <span>Insta Icon</span><br>
+                        <span>Twitter Icon</span><br>
+                        <span>Facebook Icon</span><br>
+                    </section>
+                </div>
+                <hr>
+                <p>&copy 2025 Spotify AB</p>
+                <!-- <div style="height: 2000px;"></div> -->
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+
+
+
+
+
+
+    </footer>
+    
+</body>
+
+</html>
